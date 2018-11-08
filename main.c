@@ -5,21 +5,22 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x = 10;
-	int y = 20;
+	int i;
+	int grade[5] = {10, 20, 30, 40, 50};
+	int average;
 	int *ptr;
 	
-	ptr = &x;
-	printf("ptr의 값 : %d\n", *ptr);
+	// pointer setting
+	ptr = grade;
 	
-	ptr = &y;
-	printf("ptr의 값 : %d\n", *ptr);	// 첫번째  
+	// average calculation
+	for (i=0; i<5; i++)
+	{
+		average += *(ptr+i);
+	}
+	average /= 5;
 	
-	ptr = &x;
-	printf("ptr의 값 : %d\n", *ptr);
-	
-	*ptr = 20;
-	printf("x의 값 : %d\n", x);		// 두번째  
-	
+	printf("average : %d\n", average);
+
 	return 0;
 }
