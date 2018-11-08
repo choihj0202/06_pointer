@@ -5,16 +5,21 @@
 
 int main(int argc, char *argv[]) {
 	
-	int i = 365;
+	int x = 10;
+	int y = 20;
 	int *ptr;
 	
-	ptr = &i;
-	
-	printf("i의 주소 : %d\n", &i);
-	printf("i의 값 : %d\n", i);
-	
-	printf("ptr의 주소 : %d\n", ptr);
+	ptr = &x;
 	printf("ptr의 값 : %d\n", *ptr);
+	
+	ptr = &y;
+	printf("ptr의 값 : %d\n", *ptr);	// 첫번째  
+	
+	ptr = &x;
+	printf("ptr의 값 : %d\n", *ptr);
+	
+	*ptr = 20;
+	printf("x의 값 : %d\n", x);		// 두번째  
 	
 	return 0;
 }
